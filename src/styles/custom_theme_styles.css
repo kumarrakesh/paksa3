@@ -1,0 +1,29 @@
+/* default theme */
+:root {
+  --color-primary: rgba(37, 27, 69, 1);
+  --color-secondary: #fff;
+  --color-tertiary: rgba(14, 24, 42, 0.9);
+  --color-disabled: #b3b3b3;
+  --color-btn-primary: #1aad9c;
+  --color-step-bar: #fd7e6d;
+  --brand-gradient: linear-gradient(0deg, #f1f5f9cc 0%, #cedff0ce 100%);
+  --logo-imgurl: url("/img/huli_logo.png");
+}
+
+/* first theme for app tenant1 */
+.hulii {
+  --color-primary: rgba(37, 27, 69, 1);
+  --color-secondary: #fff;
+  --color-tertiary: rgba(14, 24, 42, 0.9);
+  --brand-gradient: linear-gradient(0deg, #f1f5f9cc 0%, #cedff0ce 100%);
+  --logo-imgurl: url("/img/huli_logo.png");
+}
+
+/* second theme for app tenant2 */
+.tise {
+  --color-primary: lightgreen;
+  --color-secondary: #fff;
+  --color-tertiary: #e7fabc;
+  --brand-gradient: linear-gradient(0deg, #f1f5f9cc 0%, white 100%);
+  --logo-imgurl: url("/img/tise_mobile_logo.png");
+}

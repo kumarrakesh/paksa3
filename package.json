@@ -1,0 +1,45 @@
+{
+  "name": "buyback-store",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "static-rm": "rm -rf out .next",
+    "static-export": "next build  && next export",
+    "static-serve": "yarn static-rm && yarn static-export && serve out",
+    "lint": "next lint",
+    "prettier": "prettier --ignore-path .gitignore \"./src/**/*.+(js|jsx|ts|tsx|css|scss|html|json|md)\"",
+    "format": "yarn run prettier -- --write",
+    "check-format": "yarn run prettier -- --list-different",
+    "extract:i18n": "formatjs extract 'src/**/*.js' --id-interpolation-pattern '[sha512:contenthash:base64:6]' --out-file lang/en.json",
+    "compile:i18n": "formatjs compile-folder --ast lang public/compiled_locales",
+    "i18n": "yarn extract:i18n && yarn compile:i18n"
+  },
+  "dependencies": {
+    "antd": "^4.16.13",
+    "next": "11.1.2",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-query": "^3.24.2"
+  },
+  "devDependencies": {
+    "@formatjs/cli": "^4.2.33",
+    "autoprefixer": "^10.3.4",
+    "babel-plugin-formatjs": "^10.3.8",
+    "eslint": "7.32.0",
+    "eslint-config-next": "11.1.2",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-formatjs": "^2.17.6",
+    "postcss": "^8.3.6",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-import": "^14.0.2",
+    "postcss-preset-env": "^6.7.0",
+    "prettier": "^2.4.1",
+    "serve": "^12.0.1",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^22.0.0",
+    "tailwindcss": "^2.2.15"
+  }
+}
