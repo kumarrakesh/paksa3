@@ -10,7 +10,7 @@ export function useGetBuybackPhones() {
   }
 
   return useQuery("getBuybackPhones", () =>
-    fetch(`http://paksa3.moorup.no/api/getalldevices`, {headers: headers, method: "GET"}).then((res) => res.json())
+    fetch(`http://paksa3.moorup.no/srotah/api/getalldevices`, {headers: headers, method: "GET"}).then((res) => res.json())
   );
 }
 
@@ -23,7 +23,7 @@ export function useGetBuybackPhone(id) {
   }
 
   return useQuery("getBuybackPhone", () =>
-    fetch(`http://paksa3.moorup.no/api/buybackdevice/${id}`, {headers: headers, method: "GET"}).then((res) => res.json())
+    fetch(`http://paksa3.moorup.no/srotah/api/buybackdevice/${id}`, {headers: headers, method: "GET"}).then((res) => res.json())
   );
 }
 
@@ -41,7 +41,7 @@ export function useUpdateBuyback(id) {
   return useMutation(formData => {
     //debugger;
     
-    return fetch(`http://paksa3.moorup.no/api/editonedevice/`,{headers: headers, method: "POST", body: JSON.stringify({...formData, _id: id})})
+    return fetch(`http://paksa3.moorup.no/srotah/api/editonedevice/`,{headers: headers, method: "POST", body: JSON.stringify({...formData, _id: id})})
   });
 }
 /* 
