@@ -41,6 +41,33 @@ const statusValues = [
   },
 ];
 
+const gradeValues = [
+  {
+    name: "C",
+    value: "c",
+  },
+  {
+    name: "D",
+    value: "d",
+  },
+  {
+    name: "E",
+    value: "e",
+  },
+  {
+    name: "F",
+    value: "f",
+  },
+  {
+    name: "B",
+    value: "b",
+  },
+  {
+    name: "A",
+    value: "a",
+  }
+];
+
 export default function EditRecord() {
   const router = useRouter();
   const {id} = router.query;
@@ -86,6 +113,7 @@ export default function EditRecord() {
                     );
                   })}
                 </Select>
+           
               </Form.Item>
             </div>
           </div>

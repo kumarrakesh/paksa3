@@ -10,9 +10,9 @@ export function BuybackPhone({id, status, model, capacity, grade, imei, customer
     
   }
   return (
-    <div className="w-80 bg-red-200 border border-solid border-gray-200 p-5">
+    <div className="w-80 bg-green-50 border border-solid border-gray-200 p-5">
       <div className="wrapper flex flex-col justify-center items-center space-y-1">
-        <div className="status">{status}</div>
+        <div className="text-2xl status">{status}</div>
         <div className="phone-model-capacity-grade">{getData()}</div>
         <div className="imei">{imei}</div>
       </div>
@@ -24,8 +24,8 @@ export function BuybackPhone({id, status, model, capacity, grade, imei, customer
           <div className="customerAddress">{customer?.address}</div>
         </div>
         <div className="right flex flex-col">
-          <div className="generatedDate ml-auto">{generatedDate}</div>
-          <div className="editButton mt-5 ml-auto">
+          <div className="generatedDate ml-auto">{generatedDate.substring(0,10)}</div>
+          <div className="editButton mt-5 ml-auto w-20 bg-green-800">
             {/* <Button onClick={handleClick}>Edit</Button> */}
             <Link
           href={{
